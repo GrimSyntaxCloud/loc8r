@@ -11,8 +11,17 @@ const ctrlOthers = require('../controllers/others');
 /* GET home page. */
 
 /**
- * references the index method of the controllers in the route definition.
+ * Locations pages
  */
-router.get('/', ctrlMain.index);
+
+router.get('/'. ctrlLocations.homelist);
+router.get('/location', ctrlLocations.locationInfo);
+router.get('/location/review/new', ctrlLocations.addReview);
+
+/**
+ * Others pages
+ */
+
+router.get('/about', ctrlOthers.about);
 
 module.exports = router;
