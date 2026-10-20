@@ -6,7 +6,8 @@ block content
             h1 Review Starcups 
     .row 
         .col-12.col-md-8 
-            form(action="/location", method="get", role="form")
+            p This learning demo shows sample reviews. New reviews are not saved.
+            form(role="form")
                 .form-group.row 
                     label.col-10.col-sm-2.col-form-label(for="name") Name 
                     .col-12.col-sm-10 
@@ -24,4 +25,4 @@ block content
                     label.col-sm-2.col-form-label(for="review") Review 
                     .col-sm-10 
                         textarea#review.form-control(name="review", rows="5")
-                button.btn.btn-primary.float-right Add my review
+                button.btn.btn-primary.float-right(type="button" disabled) Sample form — reviews are not saved
