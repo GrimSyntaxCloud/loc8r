@@ -1,28 +1,29 @@
-extends layout 
-
-block content 
-    .row.banner 
-        .col-12 
-            h1 Review Starcups 
-    .row 
-        .col-12.col-md-8 
-            p This learning demo shows sample reviews. New reviews are not saved.
-            form(role="form")
-                .form-group.row 
-                    label.col-10.col-sm-2.col-form-label(for="name") Name 
-                    .col-12.col-sm-10 
-                        input#name.form-control(name="name")
-                .form-group.row 
-                    label.col-10.col-sm-2.col-form-label(for="rating") Rating
-                    .col-12.col-sm-2 
-                        select#rating.form-control.input-sm(name="rating")
-                            option 5
-                            option 4
-                            option 3
-                            option 2
-                            option 1
-                .form-group.row 
-                    label.col-sm-2.col-form-label(for="review") Review 
-                    .col-sm-10 
-                        textarea#review.form-control(name="review", rows="5")
-                button.btn.btn-primary.float-right(type="button" disabled) Sample form — reviews are not saved
+extends layout
+block content
+  .page-top
+    a.back-link(href='/location/') ← Back to Starcups
+    span.eyebrow FIELD NOTES / PREVIEW
+  section.review-layout
+    .review-intro
+      p.eyebrow HOW WAS YOUR CORNER?
+      h1 A little<br><em>local insight.</em>
+      p Good coffee? Great wifi? This is what leaving a note for the next visitor could look like.
+      aside.demo-callout
+        strong Just a sample form.
+        p Nothing you type is sent or saved. Please use fictional details. There is no review submission service.
+    form.sample-form(aria-label='Non-submitting sample review form' onsubmit='return false')
+      p.eyebrow YOUR NOTES ON STARCUPS
+      label(for='name') Your name
+      input#name(type='text' maxlength='60' autocomplete='off' placeholder='A fictional name')
+      label(for='rating') Your rating
+      select#rating
+        option(value='5') 5 — A new favorite
+        option(value='4') 4 — Worth a return
+        option(value='3' selected) 3 — A good little stop
+        option(value='2') 2 — Room to improve
+        option(value='1') 1 — Not for me
+      label(for='review') Your review
+      textarea#review(rows='5' maxlength='500' placeholder='A few words about this sample location…' aria-describedby='review-limit')
+      p#review-limit.small-note Up to 500 characters. This text stays on this page.
+      button.button(type='button' disabled) Sample only — not submitted
+      a.text-link(href='/location/') Back to the location ↗

@@ -1,0 +1,34 @@
+figure.field-map(aria-label='Illustrated street grid highlighting the sample Starcups location. This artwork is not a geographic map.')
+  svg(viewBox='0 0 620 590' role='img' aria-labelledby='map-title')
+    title#map-title An illustrated route to a place to settle in
+    defs
+      pattern#map-grid(width='30' height='30' patternUnits='userSpaceOnUse')
+        path(d='M30 0H0V30' fill='none' stroke='#b8c9cf' stroke-width='.6')
+    rect(width='620' height='590' fill='#dce5e7')
+    rect(width='620' height='590' fill='url(#map-grid)')
+    g(fill='#bbcbd0' stroke='#a0b5bd' stroke-width='1')
+      path(d='M50 65H194V171H50Z M235 65H375V171H235Z M416 65H566V171H416Z M50 214H194V346H50Z M235 214H375V346H235Z M416 214H566V346H416Z M50 389H194V528H50Z M235 389H375V528H235Z M416 389H566V528H416Z')
+    g(fill='none' stroke='#eef3f3' stroke-width='28')
+      path(d='M0 193H620 M0 367H620 M215 0V590 M395 0V590')
+    g(fill='none' stroke='#a2b7bf' stroke-width='1' stroke-dasharray='3 7')
+      path(d='M0 193H620 M0 367H620 M215 0V590 M395 0V590')
+    path.route-path(d='M70 470H215V193H395V280' fill='none' stroke='#182f3c' stroke-width='4' stroke-linecap='round' stroke-dasharray='7 10')
+    circle(cx='70' cy='470' r='9' fill='#182f3c')
+    circle.radar-ring(cx='395' cy='280' r='52' fill='none' stroke='#182f3c' stroke-width='1')
+    circle(cx='395' cy='280' r='29' fill='#d3ef4e' stroke='#182f3c' stroke-width='2')
+    path(d='M385 279H405 M395 269V289' stroke='#182f3c' stroke-width='2')
+    g(fill='#536671' font-family='monospace' font-size='10' letter-spacing='2')
+      text(x='72' y='147') A LITTLE QUIETER
+      text(x='430' y='505') ROOM TO THINK
+      text(x='246' y='155') HIGH STREET
+      text(x='48' y='556') READING · SAMPLE AREA
+    g(transform='translate(541 32)' fill='none' stroke='#182f3c')
+      circle(cx='24' cy='24' r='23')
+      path(d='M24 9L30 34L24 28L18 34Z' fill='#182f3c')
+  .map-label
+    span.marker-number 01
+    div
+      strong Starcups
+      span Coffee. Wifi. Your next chapter.
+    span(aria-hidden='true') ↗
+  figcaption Illustrated field notes · not a live map

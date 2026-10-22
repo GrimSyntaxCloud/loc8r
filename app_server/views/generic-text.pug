@@ -1,14 +1,20 @@
-extends layout 
-
-block content 
-    .row.banner 
-        .col-12 
-            h1= title 
-    .row 
-        .col-12.col-lg-8 
-            p 
-                | Loc8r was created to help people find places to sit down and get a bit of work done.
-                |   <br><br>
-                | Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia tenetur nemo eveniet iste voluptatem libero dignissimos porro adipisci aut! Itaque ullam ducimus sequi ipsum, repudiandae maxime quaerat vero id dignissimos. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis eveniet aut tempora harum perferendis cumque, magnam nobis provident non illo amet, odio facere aperiam sed ullam modi vel delectus officia?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure debitis id, fugit eaque voluptatibus quo veniam totam a magni non? Minus ullam non magni atque similique voluptatibus porro, sed tenetur.
-            p 
-                | Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui temporibus impedit quibusdam magni harum, voluptas quo soluta illum blanditiis excepturi, aliquam, culpa hic. Earum dolor quaerat eaque reiciendis totam placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel possimus soluta tempore esse saepe rem, mollitia fugit, harum iusto quo magnam animi fugiat dolorum consequuntur necessitatibus officiis quae, rerum doloribus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem ad deleniti dolore culpa voluptatibus excepturi ab veritatis? Assumenda cumque molestiae culpa voluptate facilis reprehenderit, at perferendis laborum? Labore, laborum assumenda. Lorem ipsum dolor sit amet consectetur, adipisicing elit. In dolore similique, labore omnis commodi cum. Laborum quae quia neque minima, fugiat ducimus, ex asperiores, rerum nam commodi temporibus error et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis eos sint reiciendis adipisci totam saepe neque explicabo quas alias. Magni quo, suscipit placeat atque nobis perspiciatis facere repudiandae amet laborum?
+extends layout
+block content
+  .page-top
+    a.back-link(href='/') ← Back to the guide
+    span.eyebrow THE STORY / LOC8R
+  section.about-layout
+    .about-title
+      p.eyebrow GOOD WORK NEEDS A LITTLE SPACE
+      h1 Anywhere<br>can be<br><em>your corner.</em>
+      .about-stamp(aria-hidden='true') COFFEE<br>+ WIFI<br>+ YOU ↗
+    .about-copy
+      p.large-copy Loc8r started with a simple idea: help people find a place to sit down and get a bit of work done.
+      p Perhaps with coffee, cake, or a pint. A place with accessible wifi and room for your laptop. Somewhere outside the usual four walls.
+      hr
+      p.eyebrow A LEARNING PROJECT, REVISITED
+      h2 A field guide<br><em>with a backstory.</em>
+      p This project is based on <em>Getting MEAN</em> by Simon Holmes and Clive Harber. It retains the original Starcups location, opening hours, facilities, and sample reviews, with a new cartographic interface by Andres.
+      p The pages are built from Pug templates and published as static HTML on GitHub Pages. Everything here is fictional: there is no location tracking, live business search, database, or saved review system.
+      p OpenStreetMap provides an optional external map link, without an embedded map or API key. The animated route artwork is an illustration rather than a geographic map.
+      a.button(href='/#places') Explore the sample place <span aria-hidden='true'>↗</span>

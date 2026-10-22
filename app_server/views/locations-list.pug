@@ -1,65 +1,72 @@
 extends layout
-
 block content
-  .row.banner
-    .col-12 
-      h1 Loc8r 
-        small &nbsp;Find places to work with wifi near you! 
-  .row 
-    .col-12.col-md-8 
-      .card 
-        .card-block 
-          h4 
-            a(href='/location') Starcups
-            small &nbsp;
-              i.fas.fa-star 
-              i.fas.fa-star 
-              i.fas.fa-star 
-              i.far.fa-star 
-              i.far.fa-star 
-            span.badge.badge-pill.badge-default.float-right 100m
-          p.address 125 High Street, Reading, RG6 1PS
-          p.facilities 
-            span.badge.badge-warning Hot drinks 
-            span.badge.badge-warning Food 
-            span.badge.badge-warning Premium wifi
-
-      .card 
-        .card-block 
-          h4 
-            a(href='/location') Starcups
-            small &nbsp;
-              i.fas.fa-star 
-              i.fas.fa-star 
-              i.fas.fa-star 
-              i.far.fa-star 
-              i.far.fa-star 
-            span.badge.badge-pill.badge-default.float-right 100m
-          p.address 125 High Street, Reading, RG6 1PS
-          p.facilities 
-            span.badge.badge-warning Hot drinks 
-            span.badge.badge-warning Food 
-            span.badge.badge-warning Premium wifi
-
-
-      .card 
-        .card-block 
-          h4 
-            a(href='/location') Starcups
-            small &nbsp;
-              i.fas.fa-star 
-              i.fas.fa-star 
-              i.fas.fa-star 
-              i.far.fa-star 
-              i.far.fa-star 
-            span.badge.badge-pill.badge-default.float-right 100m
-          p.address 125 High Street, Reading, RG6 1PS
-          p.facilities 
-            span.badge.badge-warning Hot drinks 
-            span.badge.badge-warning Food 
-            span.badge.badge-warning Premium wifi
-
-    .col-12.col-md-4 
-      p.lead
-        | Looking for wifi and a seat? Loc8r helps you find places to work when out and about. Perhaps with coffee, cake or a pint? Let Loc8r help you find the place you're looking for.
-    
+  section.guide-masthead
+    div
+      p.eyebrow READING, UK / FIELD GUIDE NO. 001
+      h1 A good place to <span>plug in.</span>
+    p Coffee, a connection, a corner. <br>Find a little room to think.
+  section.explore-board(aria-label='Sample location field guide')
+    aside.place-index-rail
+      .rail-heading
+        span.eyebrow THE LOCAL INDEX
+        span.index-count 01
+      a.index-place(href='/location/')
+        .index-topline
+          span.eyebrow SAMPLE LOCATION
+          span(aria-hidden='true') ↗
+        h2 Starcups
+        p 125 High Street<br>Reading, RG6 1PS
+        span.stars(aria-label='3 out of 5 stars') ★★★<span>☆☆</span>
+        p.index-distance 100 m <span>sample distance</span>
+        ul.tags(aria-label='Facilities')
+          li Hot drinks
+          li Food
+          li Premium wifi
+        span.index-explore Explore this place <span aria-hidden='true'>↗</span>
+      .rail-footnote
+        span.rail-cross(aria-hidden='true') +
+        p A little farther from your desk.<br>A little closer to your next idea.
+        p Fictional listing. No location tracking or live distance data.
+    .guide-map
+      include map
+      .map-toolbar
+        span.eyebrow AREA / READING
+        span.coordinate 51.4550° N · 0.9691° W
+      .map-key
+        span.key-dot(aria-hidden='true')
+        span Sample workspace
+        span.map-key-separator /
+        span Illustrated area
+  section.guide-caption
+    p <span aria-hidden='true'>↳</span> A field guide for working anywhere.
+    a.text-link(href='/location/') View the location notes ↗
+  section.amenity-strip(aria-label='What to look for')
+    p <span aria-hidden="true">⌁</span> A steady connection
+    p <span aria-hidden="true">◒</span> Something warm to sip
+    p <span aria-hidden="true">⊞</span> Space to make progress
+  section.places-section#places
+    .section-heading
+      div
+        p.eyebrow THE LOCAL INDEX / 01 PLACE
+        h2 A seat worth<br><em>settling into.</em>
+      p A coffee stop, a quiet hour, a fresh perspective. Start with our original sample location.
+    a.place-row(href='/location/' aria-label='Explore Starcups, fictional sample location')
+      span.place-index 01
+      .place-main
+        p.eyebrow THE EVERYDAY FAVORITE
+        h3 Starcups
+        p 125 High Street, Reading, RG6 1PS
+        ul.tags(aria-label='Facilities')
+          li Hot drinks
+          li Food
+          li Premium wifi
+      .place-rating
+        span.stars(aria-label='3 out of 5 stars') ★★★<span>☆☆</span>
+        p 2 sample reviews
+        span.distance 100 m <small>sample distance</small>
+      span.round-arrow(aria-hidden='true') ↗
+    p.demo-note These are fixed, fictional examples from a learning project. No location tracking, live distances, or availability data.
+  section.closing-note
+    p.eyebrow TAKE A BREATHER. FIND YOUR FOCUS.
+    p Work can happen<br><em>somewhere different.</em>
+    a.text-link(href='/about/') The story behind Loc8r ↗
