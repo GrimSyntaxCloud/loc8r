@@ -20,3 +20,23 @@ The legacy Node/Express dependencies are not deployed to GitHub Pages.
 
 The old Google Maps key was removed from the current source, but remains in Git
 history. The owner reported deleting that credential in Google Cloud.
+
+## Local development and checks
+
+Use Node.js 22 LTS or newer:
+
+```sh
+npm ci
+npm start
+```
+
+Open http://localhost:3000. This starts the original Express/Pug renderer with the same fixed sample data; it does not require a database credential. `npm run dev` restarts it when source files change.
+
+To preview the actual static deployment:
+
+```sh
+BASE_PATH=/ npm run build:pages
+python3 -m http.server 8080 --bind 127.0.0.1 --directory dist
+```
+
+Open http://127.0.0.1:8080. Run `npm audit` when maintaining dependencies. The Pages build is the existing automated validation; there is no separate behavioral test suite. `.github/dependabot.yml` checks both npm packages and Actions weekly, while changes still require review and a passing build.
