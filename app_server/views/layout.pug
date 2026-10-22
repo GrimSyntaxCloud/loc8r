@@ -1,36 +1,28 @@
 doctype html
-html
+html(lang='en')
   head
-    meta(name='viewport', content='width=device-width initial-scale=1.0')
-    title= title
-    link(rel='stylesheet',  href='/stylesheets/bootstrap.min.css')
-    link(rel='stylesheet', href='/stylesheets/all.min.css')
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='description', content='A little field guide to finding wifi, coffee, and room to think. Loc8r is a fictional location-directory learning demo.')
+    meta(name='color-scheme', content='light')
+    title #{title} — Loc8r
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
-
-nav.navbar.fixed-top.navbar-expand-md.navbar-light                   
-  .container
-    a.navbar-brand(href='/') Loc8r
-    button.navbar-toggler(type='button', aria-controls='navbarMain', aria-expanded='false', aria-label='Toggle navigation')
-      span.navbar-toggler-icon
-    #navbarMain.navbar-collapse.collapse
-      ul.navbar-nav.mr-auto
-        li.nav-item
-          a.nav-link(href='/about/') About
-
-
-.container.content
-  block content
-
-  footer
-    .row
-      .col-12
-        small &copy; Getting MEAN - Simon Homes/CLive Harber 2018
-
-
-
-
-
-
-
-script(src='/javascripts/navigation.js', defer)
+    a.skip-link(href='#main') Skip to content
+    header.site-header
+      a.wordmark(href='/' aria-label='Loc8r home') loc8r<span class="wordmark-dot">↗</span>
+      p.header-note A field guide for<br>working anywhere.
+      nav(aria-label='Main navigation')
+        a(href='/#places' aria-current=title === 'Home' ? 'page' : undefined) The places
+        a(href='/about/' aria-current=title === 'About' ? 'page' : undefined) The story
+        button.motion-toggle(type='button', aria-pressed='false') Pause motion
+    main#main(tabindex='-1')
+      block content
+    footer.site-footer
+      a.wordmark(href='/') loc8r<span class="wordmark-dot">↗</span>
+      p A good connection.<br>A little room to think.
+      .footer-meta
+        p Fictional places. Real curiosity.
+        small Learning project from <em>Getting MEAN</em>.<br>© Simon Holmes / Clive Harber, 2018.
+        a(href='/about/') About this demo ↗
+    script(src='/javascripts/navigation.js', defer)
