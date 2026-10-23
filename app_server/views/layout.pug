@@ -10,7 +10,7 @@ html(lang='en')
   body
     a.skip-link(href='#main') Skip to content
     header.site-header
-      a.wordmark(href='/' aria-label='Loc8r home') loc8r<span class="wordmark-dot">↗</span>
+      a.wordmark(href='/' aria-label='Loc8r home') loc8r<span class="wordmark-dot"><svg class="compat-arrow" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14"></path></svg></span>
       p.header-note A field guide for<br>working anywhere.
       nav(aria-label='Main navigation')
         a(href='/#places' aria-current=title === 'Home' ? 'page' : undefined) The places
@@ -19,10 +19,10 @@ html(lang='en')
     main#main(tabindex='-1')
       block content
     footer.site-footer
-      a.wordmark(href='/') loc8r<span class="wordmark-dot">↗</span>
+      a.wordmark(href='/') loc8r<span class="wordmark-dot"><svg class="compat-arrow" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14"></path></svg></span>
       p A good connection.<br>A little room to think.
       .footer-meta
         p Fictional places. Real curiosity.
         small Learning project from <em>Getting MEAN</em>.<br>© Simon Holmes / Clive Harber, 2018.
-        a(href='/about/') About this demo ↗
+        a(href='/about/') About this demo <svg class="compat-arrow" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14"></path></svg>
     script(src='/javascripts/navigation.js', defer)

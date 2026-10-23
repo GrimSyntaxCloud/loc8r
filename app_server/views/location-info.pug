@@ -1,7 +1,7 @@
 extends layout
 block content
   .page-top
-    a.back-link(href='/#places') ← Back to the index
+    a.back-link(href='/#places') <svg class="compat-arrow" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 12H4m7-7-7 7 7 7"></path></svg> Back to the index
     span.eyebrow LOCATION / 01
   section.location-hero
     .location-summary
@@ -16,7 +16,7 @@ block content
         li Hot drinks
         li Food
         li Premium wifi
-      a.button(href='https://www.openstreetmap.org/?mlat=51.455041&mlon=-0.9690884#map=17/51.455041/-0.9690884' target='_blank' rel='noopener noreferrer') Open map <span aria-hidden="true">↗</span>
+      a.button(href='https://www.openstreetmap.org/?mlat=51.455041&mlon=-0.9690884#map=17/51.455041/-0.9690884' target='_blank' rel='noopener noreferrer') Open map <span aria-hidden="true"><svg class="compat-arrow" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14"></path></svg></span>
       p.small-note Opens OpenStreetMap in a new tab. Sample coordinates.
     .detail-map
       include map
@@ -40,7 +40,7 @@ block content
         div
           p.eyebrow NOTES FROM THE TABLE
           h2 A few words.
-        a.text-link(href='/location/review/new/') Preview a review ↗
+        a.text-link(href='/location/review/new/') Preview a review <svg class="compat-arrow" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14"></path></svg>
       article.review
         .review-meta
           span.review-avatar(aria-hidden='true') SH
