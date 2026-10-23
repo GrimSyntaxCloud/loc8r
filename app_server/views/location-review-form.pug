@@ -1,7 +1,7 @@
 extends layout
 block content
   .page-top
-    a.back-link(href='/location/') ← Back to Starcups
+    a.back-link(href='/location/') <svg class="compat-arrow" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 12H4m7-7-7 7 7 7"></path></svg> Back to Starcups
     span.eyebrow FIELD NOTES / PREVIEW
   section.review-layout
     .review-intro
@@ -26,4 +26,4 @@ block content
       textarea#review(rows='5' maxlength='500' placeholder='A few words about this sample location…' aria-describedby='review-limit')
       p#review-limit.small-note Up to 500 characters. This text stays on this page.
       button.button(type='button' disabled) Sample only — not submitted
-      a.text-link(href='/location/') Back to the location ↗
+      a.text-link(href='/location/') Back to the location <svg class="compat-arrow" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14"></path></svg>
